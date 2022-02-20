@@ -1,0 +1,1 @@
+/home/programmer/RustAPPS/AttendanceChain/contract/target/wasm32-unknown-unknown/debug/greeter.wasm: /home/programmer/RustAPPS/AttendanceChain/contract/src/lib.rs /home/programmer/RustAPPS/AttendanceChain/contract/src/model.rs /home/programmer/RustAPPS/AttendanceChain/contract/src/utils.rs
