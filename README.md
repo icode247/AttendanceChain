@@ -1,4 +1,4 @@
-my-project
+AttendanceChain
 ==================
 
 This app was initialized with [create-near-app]
@@ -99,3 +99,19 @@ On Windows, if you're seeing an error containing `EPERM` it may be related to sp
   [NEAR Wallet]: https://wallet.testnet.near.org/
   [near-cli]: https://github.com/near/near-cli
   [gh-pages]: https://github.com/tschaub/gh-pages
+  
+  
+Test the contract
+==================
+
+ 1. set_parent: This functions adds a parent to the smart contract. eg: `near call dev-1645307407162-70213718739518 set_parent  --account-id dev-1645307407162-70213718739518`
+
+ 2. set_student: This functions add a student to the smart contract eg: `near call dev-1645307407162-70213718739518 set_student '{"student_name":"","school_name":""}'  --account-id dev-1645307407162-70213718739518`
+
+ 3. set_lesson: This function adds a new lesson to the blockchain, each of the lessons stores the ID of the parents that created them. eg: `dev-1645307407162-70213718739518 set_lesson '{"subject":"","task":""}'  --account-id dev-1645307407162-70213718739518`
+
+ 4. asign_lesseon: This functions allows a parent to assign lessons to their children. Eg: `dev-1645307407162-70213718739518 assign_lesson '{"student_id":"","lesson_id":""}'  --account-id dev-1645307407162-70213718739518`
+
+ 5. complete_lesson: This function allows a child to complete a lesson. Eg. `dev-1645307407162-70213718739518 complete_lesson '{"id":"","task":""}'  --account-id dev-1645307407162-70213718739518`
+
+ 6. approve_lesson: This function allows a parent to approved a lesson. Eg. `dev-1645307407162-70213718739518 approve_lesson '{"id":""}'  --account-id dev-1645307407162-70213718739518`
